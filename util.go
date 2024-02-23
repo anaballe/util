@@ -18,7 +18,7 @@ type Element struct {
 	Index int
 }
 
-func levelOrder(nums []IntegerStruct) *TreeNode {
+func LevelOrder(nums []IntegerStruct) *TreeNode {
 	n := len(nums)
 	if n == 0 {
 		return nil
