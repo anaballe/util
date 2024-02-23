@@ -1,3 +1,3 @@
-module github.com/anandshukla-sharechat/util
+module util
 
 go 1.21.6
