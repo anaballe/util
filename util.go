@@ -18,6 +18,29 @@ type Element struct {
 	Index int
 }
 
+type ListNode struct {
+	Val  int
+	Next *ListNode
+}
+
+func PrepareLinkListFromArray(nums []int) *ListNode {
+	head := &ListNode{}
+	curr := head
+
+	for i, val := range nums {
+		if i == 0 {
+			curr.Val = val
+			curr.Next = nil
+		} else {
+			temp := &ListNode{Val: val, Next: nil}
+			curr.Next = temp
+			curr = curr.Next
+		}
+	}
+
+	return head
+}
+
 func LevelOrder(nums []IntegerStruct) *TreeNode {
 	n := len(nums)
 	if n == 0 {
